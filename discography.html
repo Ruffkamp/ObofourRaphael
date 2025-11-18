@@ -177,11 +177,7 @@
                     const modal = document.getElementById('payment-modal');
                     const closeModal = document.getElementById('close-modal');
                     const confirmBtn = document.getElementById('confirm-payment-btn');
-
-                    // Check if payment is already confirmed
-                    if (localStorage.getItem('paymentConfirmed') === 'true') {
-                        downloadBtn.classList.remove('blurred');
-                    }
+                    const paymentProof = document.getElementById('payment-proof');
 
                     // Check URL parameters for payment status
                     const urlParams = new URLSearchParams(window.location.search);
@@ -202,11 +198,14 @@
 
                     // Confirm payment and unlock download
                     confirmBtn.addEventListener('click', function() {
-                        localStorage.setItem('paymentConfirmed', 'true');
-                        downloadBtn.classList.remove('blurred');
-                        modal.style.display = 'none';
-                        // Clear URL parameter
-                        window.history.replaceState(null, null, window.location.pathname);
+                        if (paymentProof.files.length > 0) {
+                            downloadBtn.classList.remove('blurred');
+                            modal.style.display = 'none';
+                            // Clear URL parameter
+                            window.history.replaceState(null, null, window.location.pathname);
+                        } else {
+                            alert('Please upload a payment confirmation image before confirming.');
+                        }
                     });
 
                     // Close modal when clicking outside
@@ -261,8 +260,9 @@
                 <div id="payment-modal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
                     <div class="modal-content" style="background-color: var(--dark-bg); margin: 15% auto; padding: 20px; border: 1px solid var(--accent); border-radius: 10px; width: 80%; max-width: 400px; color: var(--white); text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
                         <span class="close-modal" id="close-modal" style="color: var(--text-secondary); float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
-                        <h2 style="color: var(--accent); margin: 20px 0 10px 0;">Payment Successful!</h2>
-                        <p style="margin-bottom: 20px; line-height: 1.6;">Thank you for your payment. Click the button below to unlock your download.</p>
+                        <h2 style="color: var(--accent); margin: 20px 0 10px 0;">Confirm Payment</h2>
+                        <p style="margin-bottom: 15px; line-height: 1.6;">Please upload a screenshot or image of your payment confirmation before unlocking the download.</p>
+                        <input type="file" id="payment-proof" accept="image/*" style="margin-bottom: 20px; padding: 10px; border: 1px solid var(--accent); border-radius: 5px; background-color: var(--white); color: var(--dark-bg);">
                         <button id="confirm-payment-btn" class="album-btn" style="background: linear-gradient(135deg, #D4AF37 0%, #F4E87C 100%); color: #0b0b0b; padding: 12px 24px; border: none; border-radius: 25px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);">✅ Confirm Payment & Unlock Download</button>
                     </div>
                 </div>
