@@ -64,6 +64,7 @@
 
                         <div class="album-buttons">
                             <a href="https://www.paypal.com/ncp/payment/8B54CYT3A5R6L" target="_blank" rel="noopener noreferrer" class="album-btn paypal-btn">🛒 Buy Album with PayPal</a>
+                            <a href="#" id="confirm-paypal-btn" class="album-btn" style="background: var(--accent); color: var(--dark-bg);">✅ Confirm PayPal Payment</a>
                             <a href="https://paystack.com/buy/obofour-raphael---adom-akyedee-digital-album-download-hyyzir?success_url=https://obo4raphael.com/discography.html?payment=pending" target="_blank" rel="noopener noreferrer" class="album-btn paystack-btn">💳 Buy Album with PayStack (Mobile Money)</a>
                             <a href="https://forms.office.com/r/Gz0z7N0Kue" target="_blank" rel="noopener noreferrer" class="album-btn cd-btn">💿 Want Physical CD</a>
                             <a href="https://elasticstage.com/obo4raphael/releases/adom-akyedee-part-one-album" target="_blank" rel="noopener noreferrer" class="album-btn vinyl-btn">🎵 Get Vinyl Album Part One</a>
@@ -172,6 +173,7 @@
                 // Payment and Download Unlock Functionality
                 document.addEventListener('DOMContentLoaded', function() {
                     const downloadBtn = document.getElementById('download-btn');
+                    const confirmPaypalBtn = document.getElementById('confirm-paypal-btn');
                     const modal = document.getElementById('payment-modal');
                     const closeModal = document.getElementById('close-modal');
                     const confirmBtn = document.getElementById('confirm-payment-btn');
@@ -186,6 +188,12 @@
                     if (urlParams.get('payment') === 'pending') {
                         modal.style.display = 'block';
                     }
+
+                    // Confirm PayPal payment button click
+                    confirmPaypalBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        modal.style.display = 'block';
+                    });
 
                     // Close modal
                     closeModal.addEventListener('click', function() {
