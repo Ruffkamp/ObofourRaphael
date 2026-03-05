@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Obofour Raphael</title>
+    <meta name="description" content="Shop official Obofour Raphael merchandise - t-shirts, hoodies, and more.">
+    <meta property="og:title" content="Store | Obofour Raphael">
+    <meta property="og:description" content="Shop official merchandise.">
+    <meta property="og:image" content="ObofourThumb.jpg">
+    <meta property="og:url" content="https://obo4raphael.com/store.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="obofourlogoo.png">
+</head>
+<body>
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <img src="obofourlogoo.png" alt="Obofour Raphael" class="loader-logo">
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="obofourlogoo.png" alt="Obofour Raphael">
+            </a>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="music.html" class="navbar-link">Music</a>
+                <a href="videos.html" class="navbar-link">Videos</a>
+                <a href="tour.html" class="navbar-link">Tour</a>
+                <a href="store.html" class="navbar-link active">Store</a>
+                <a href="news.html" class="navbar-link">News</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-background">
+            <img src="yesu.jpg" alt="Store">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title gradient-text">STORE</h1>
+            <p class="hero-subtitle">Official Merchandise</p>
+            <p class="hero-description">Show your support with premium apparel featuring the iconic Yesu design.</p>
+        </div>
+    </section>
+
+    <section class="section merch-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Collection</span>
+                <h2 class="section-title">Yesu Merchandise</h2>
+            </div>
+            
+            <div class="merch-grid" id="merch-grid">
+                <div class="merch-card reveal">
+                    <div class="merch-image">
+                        <img src="blackyesuhoodie.jpg" alt="Black Yesu Hoodie">
+                        <span class="merch-badge">Best Seller</span>
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">Black Yesu Hoodie</h3>
+                        <p class="merch-price">₵120</p>
+                        <select class="form-input" style="margin-bottom: var(--space-md); padding: var(--space-sm);">
+                            <option>Select Size</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                            <option>XL</option>
+                        </select>
+                        <button class="merch-btn" onclick="addToCart('Black Yesu Hoodie', 120)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="merch-card reveal reveal-delay-1">
+                    <div class="merch-image">
+                        <img src="blackyesumerch.jpg" alt="Black Yesu T-Shirt">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">Black Yesu T-Shirt</h3>
+                        <p class="merch-price">₵120</p>
+                        <select class="form-input" style="margin-bottom: var(--space-md); padding: var(--space-sm);">
+                            <option>Select Size</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                            <option>XL</option>
+                        </select>
+                        <button class="merch-btn" onclick="addToCart('Black Yesu T-Shirt', 120)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="merch-card reveal reveal-delay-2">
+                    <div class="merch-image">
+                        <img src="redyesumerch.jpg" alt="Red Yesu T-Shirt">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">Red Yesu T-Shirt</h3>
+                        <p class="merch-price">₵120</p>
+                        <select class="form-input" style="margin-bottom: var(--space-md); padding: var(--space-sm);">
+                            <option>Select Size</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                            <option>XL</option>
+                        </select>
+                        <button class="merch-btn" onclick="addToCart('Red Yesu T-Shirt', 120)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="merch-card reveal reveal-delay-3">
+                    <div class="merch-image">
+                        <img src="whiteyesumerch.jpg" alt="White Yesu T-Shirt">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">White Yesu T-Shirt</h3>
+                        <p class="merch-price">₵120</p>
+                        <select class="form-input" style="margin-bottom: var(--space-md); padding: var(--space-sm);">
+                            <option>Select Size</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                            <option>XL</option>
+                        </select>
+                        <button class="merch-btn" onclick="addToCart('White Yesu T-Shirt', 120)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Section -->
+            <div class="section" style="background: var(--color-secondary); margin-top: var(--space-2xl); border-radius: var(--radius-lg);" id="cart-section">
+                <div class="container">
+                    <h3 class="text-center" style="margin-bottom: var(--space-lg);">Shopping Cart</h3>
+                    <div id="cart-items">
+                        <p class="text-center" style="color: var(--color-text-muted);">Your cart is empty</p>
+                    </div>
+                    <div class="text-center" style="margin-top: var(--space-lg);">
+                        <p id="cart-total" style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent-gold);">Total: ₵0</p>
+                        <button class="btn btn-primary" style="margin-top: var(--space-md);" onclick="checkout()">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--color-primary);">
+        <div class="container text-center">
+            <div class="section-header reveal">
+                <span class="section-label">Shipping</span>
+                <h2 class="section-title">Delivery Information</h2>
+            </div>
+            
+            <div style="max-width: 700px; margin: 0 auto; text-align: left;">
+                <div style="background: var(--color-secondary); padding: var(--space-lg); border-radius: var(--radius-lg);">
+                    <h4 style="margin-bottom: var(--space-md);">📦 Shipping Within Ghana</h4>
+                    <p style="margin-bottom: var(--space-md);">Delivery within 3-5 business days. Free shipping on orders over ₵300.</p>
+                    
+                    <h4 style="margin-bottom: var(--space-md);">🌍 International Shipping</h4>
+                    <p style="margin-bottom: var(--space-md);">International delivery available to select countries. Contact us for shipping quotes.</p>
+                    
+                    <h4 style="margin-bottom: var(--space-md);">💳 Payment Methods</h4>
+                    <p>We accept PayPal, PayStack (Mobile Money), and bank transfers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="obofourlogoo.png" alt="Obofour Raphael">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="videos.html" class="footer-link">Videos</a>
+                    <a href="tour.html" class="footer-link">Tour</a>
+                    <a href="store.html" class="footer-link">Store</a>
+                    <a href="news.html" class="footer-link">News</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Obofour Raphael. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            updateCartDisplay();
+            alert(item + ' added to cart!');
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-center" style="color: var(--color-text-muted);">Your cart is empty</p>';
+                cartTotal.textContent = 'Total: ₵0';
+            } else {
+                let html = '';
+                let total = 0;
+                cart.forEach((c, index) => {
+                    html += `<div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-md) 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <span>${c.item}</span>
+                        <span style="display: flex; align-items: center; gap: var(--space-md);">
+                            <span>₵${c.price}</span>
+                            <button onclick="removeFromCart(${index})" style="background: none; border: none; color: #ff4444; cursor: pointer;">✕</button>
+                        </span>
+                    </div>`;
+                    total += c.price;
+                });
+                cartItems.innerHTML = html;
+                cartTotal.textContent = 'Total: ₵' + total;
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            alert('Thank you for your order! We will contact you with payment details.');
+            cart = [];
+            updateCartDisplay();
+        }
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('page-loader').classList.add('hidden');
+            }, 1500);
+        });
+
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>

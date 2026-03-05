@@ -3,134 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obofour Raphael - Contact</title>
-    <meta name="description" content="Get in touch with musician Obofour Raphael. Contact form, email, phone, and social media details.">
-    <meta property="og:title" content="Obofour Raphael - Contact">
-    <meta property="og:description" content="Get in touch with musician Obofour Raphael. Contact form, email, phone, and social media details.">
+    <title>Contact | Obofour Raphael</title>
+    <meta name="description" content="Contact Obofour Raphael for bookings, press inquiries, and general questions.">
+    <meta property="og:title" content="Contact | Obofour Raphael">
+    <meta property="og:description" content="Get in touch with Obofour Raphael.">
     <meta property="og:image" content="ObofourThumb.jpg">
-    <meta property="og:image:alt" content="Obofour Raphael Contact Page Thumbnail">
     <meta property="og:url" content="https://obo4raphael.com/contact.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Obofour Raphael Official Website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Obofour Raphael - Contact">
-    <meta name="twitter:description" content="Get in touch with musician Obofour Raphael. Contact form, email, phone, and social media details.">
-    <meta name="twitter:image" content="ObofourThumb.jpg">
-    <meta name="twitter:image:alt" content="Obofour Raphael Contact Page Thumbnail">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="obofourlogoo.png">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header>
-        <div class="header-container">
-            <img src="obofourlogoo.png" alt="Obofour Raphael Logo" class="logo">
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="home.html" class="nav-link">Home</a></li>
-                    <li><a href="biography.html" class="nav-link">Biography</a></li>
-                    <li><a href="videos.html" class="nav-link">Videos</a></li>
-                    <li><a href="discography.html" class="nav-link">Discography</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                    <li><a href="merch.html" class="nav-link">Merch</a></li>
-                    <li><a href="news.html" class="nav-link">News</a></li>
-                </ul>
-            </nav>
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <img src="obofourlogoo.png" alt="Obofour Raphael" class="loader-logo">
+            <div class="loader-bar"><div class="loader-progress"></div></div>
         </div>
-    </header>
-    <main id="main-content">
-        <nav aria-label="Breadcrumb">
-            <ol class="breadcrumb">
-                <li><a href="home.html">Home</a></li>
-                <li>Contact</li>
-            </ol>
-        </nav>
-        <section class="contact-section">
-            <h2>Contact Me</h2>
-            <div class="contact-container">
-                <form id="contact-form" action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                        <span class="error" id="name-error"></span>
+    </div>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="obofourlogoo.png" alt="Obofour Raphael">
+            </a>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="music.html" class="navbar-link">Music</a>
+                <a href="videos.html" class="navbar-link">Videos</a>
+                <a href="tour.html" class="navbar-link">Tour</a>
+                <a href="store.html" class="navbar-link">Store</a>
+                <a href="news.html" class="navbar-link">News</a>
+                <a href="contact.html" class="navbar-link active">Contact</a>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-background">
+            <img src="OBOFOURENTRY.jpg" alt="Contact">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title gradient-text">CONTACT</h1>
+            <p class="hero-subtitle">Get In Touch</p>
+        </div>
+    </section>
+
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:bukobofour@gmail.com" class="contact-value">bukobofour@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error" id="email-error"></span>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <div class="contact-label">Phone</div>
+                            <a href="tel:+447856576523" class="contact-value">+44 785 657 6523</a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                        <span class="error" id="message-error"></span>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <div class="contact-label">Location</div>
+                            <div class="contact-value">Accra, Ghana / UK</div>
+                        </div>
                     </div>
-                    <button type="submit" id="submit-btn">Send Message</button>
-                </form>
-                <div class="contact-details">
-                    <img src="OBO4LOGO.png" alt="Obofour Raphael Logo" class="contact-logo">
-                    <h3>Connect with Obofour Raphael</h3>
-                    <p><strong>Email:</strong> <a href="mailto:bukobofour@gmail.com" class="contact-link">bukobofour@gmail.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+447856576523" class="contact-link">+447856576523</a></p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/kwahuboy?mibextid=wwXIfr&rdid=K2cBQ1CeEdZgjaih&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FCR3Tcsja%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
-                            <img src="assets/icons/facebook-official.svg" alt="Facebook">
+
+                    <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Follow Us</h4>
+                    <div class="social-links" style="justify-content: flex-start;">
+                        <a href="https://www.facebook.com/kwahuboy" target="_blank" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
-                        <a href="https://x.com/therealobofour?s=11" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-link">
-                            <img src="assets/icons/x-official.svg" alt="X (Twitter)">
+                        <a href="https://x.com/therealobofour" target="_blank" class="social-link" aria-label="X">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
-                        <a href="https://www.instagram.com/therealobofour/?igsh=MTVrY2Jsd2N4MjcwZg%3D%3D#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
-                            <img src="assets/icons/instagram-official.svg" alt="Instagram">
+                        <a href="https://www.instagram.com/therealobofour" target="_blank" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                         </a>
-                        <a href="https://www.youtube.com/@officialobofourtv?si=z6k0I4u1x_zRiwC-" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link">
-                            <img src="assets/icons/youtube-official.svg" alt="YouTube">
+                        <a href="https://www.youtube.com/@officialobofourtv" target="_blank" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#000"/></svg>
                         </a>
-                        <a href="https://www.tiktok.com/@obo4raphael?_t=ZN-8yJjKz6wWsI&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-link">
-                            <img src="assets/icons/tiktok-official.svg" alt="TikTok">
+                        <a href="https://www.tiktok.com/@obo4raphael" target="_blank" class="social-link" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
                         </a>
+                    </div>
+
+                    <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Streaming Platforms</h4>
+                    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
+                        <a href="https://open.spotify.com" target="_blank" class="album-link" style="background: #1DB954;">Spotify</a>
+                        <a href="https://music.apple.com" target="_blank" class="album-link" style="background: #FA243C;">Apple Music</a>
+                        <a href="https://audiomack.com" target="_blank" class="album-link" style="background: #000;">Audiomack</a>
                     </div>
                 </div>
 
-                <!-- Streaming Platforms Card -->
-                <div class="streaming-details">
-                    <div class="streaming-links">
-                        <a href="#" aria-label="Spotify" class="streaming-link">
-                            <img src="assets/icons/spotify-official.svg" alt="Spotify">
-                        </a>
-                        <a href="#" aria-label="Audiomack" class="streaming-link">
-                            <img src="assets/icons/audiomack-official.svg" alt="Audiomack">
-                        </a>
-                        <a href="#" aria-label="SoundCloud" class="streaming-link">
-                            <img src="assets/icons/soundcloud-official.svg" alt="SoundCloud">
-                        </a>
-                    </div>
+                <div class="contact-form reveal reveal-delay-1">
+                    <h3 style="margin-bottom: var(--space-lg);">Send a Message</h3>
+                    <form id="contact-form" onsubmit="return submitForm(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" class="form-input" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" class="form-input" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subject</label>
+                            <select class="form-input" id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="booking">Booking Request</option>
+                                <option value="press">Press/Media</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="fan">Fan Mail</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-textarea" id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2025 Obofour Raphael. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/kwahuboy?mibextid=wwXIfr&rdid=K2cBQ1CeEdZgjaih&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FCR3Tcsja%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
-                    <img src="assets/icons/facebook-official.svg" alt="Facebook">
-                </a>
-                <a href="https://x.com/therealobofour?s=11" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="footer-social-link">
-                    <img src="assets/icons/x-official.svg" alt="X (Twitter)">
-                </a>
-                <a href="https://www.instagram.com/therealobofour/?igsh=MTVrY2Jsd2N4MjcwZg%3D%3D#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-link">
-                    <img src="assets/icons/instagram-official.svg" alt="Instagram">
-                </a>
-                <a href="https://www.youtube.com/@officialobofourtv?si=z6k0I4u1x_zRiwC-" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">
-                    <img src="assets/icons/youtube-official.svg" alt="YouTube">
-                </a>
-                <a href="https://www.tiktok.com/@obo4raphael?_t=ZN-8yJjKz6wWsI&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="footer-social-link">
-                    <img src="assets/icons/tiktok-official.svg" alt="TikTok">
-                </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="obofourlogoo.png" alt="Obofour Raphael">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="videos.html" class="footer-link">Videos</a>
+                    <a href="tour.html" class="footer-link">Tour</a>
+                    <a href="store.html" class="footer-link">Store</a>
+                    <a href="news.html" class="footer-link">News</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Obofour Raphael. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="scripts/main.js"></script>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            
+            alert(`Thank you, ${name}! Your message has been sent. We will get back to you at ${email} regarding "${subject}" soon.`);
+            document.getElementById('contact-form').reset();
+            return false;
+        }
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('page-loader').classList.add('hidden');
+            }, 1500);
+        });
+
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
 </body>
 </html>

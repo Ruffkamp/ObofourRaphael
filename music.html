@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music | Obofour Raphael</title>
+    <meta name="description" content="Explore the discography of Obofour Raphael - albums, EPs, singles, and streaming options.">
+    <meta property="og:title" content="Music | Obofour Raphael">
+    <meta property="og:description" content="Listen to Obofour Raphael's music on all major streaming platforms.">
+    <meta property="og:image" content="ObofourThumb.jpg">
+    <meta property="og:url" content="https://obo4raphael.com/music.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="obofourlogoo.png">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <img src="obofourlogoo.png" alt="Obofour Raphael" class="loader-logo">
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="obofourlogoo.png" alt="Obofour Raphael">
+            </a>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="music.html" class="navbar-link active">Music</a>
+                <a href="videos.html" class="navbar-link">Videos</a>
+                <a href="tour.html" class="navbar-link">Tour</a>
+                <a href="store.html" class="navbar-link">Store</a>
+                <a href="news.html" class="navbar-link">News</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-background">
+            <img src="AdomAkyedee.JPG" alt="Music">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title gradient-text">MUSIC</h1>
+            <p class="hero-subtitle">Listen to All Releases</p>
+            <p class="hero-description">Explore albums, EPs, and singles from Ghana's finest gospel artist.</p>
+        </div>
+    </section>
+
+    <!-- Featured Album -->
+    <section class="section featured-music">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Latest Release</span>
+                <h2 class="section-title">Adom Akyedee</h2>
+            </div>
+            
+            <div class="album-card reveal" style="max-width: 800px; margin: 0 auto;">
+                <div class="album-cover" style="aspect-ratio: 16/9;">
+                    <img src="AdomAkyedee.JPG" alt="Adom Akyedee Album">
+                    <div class="album-overlay">
+                        <button class="album-play-btn" onclick="playFullAlbum()">▶</button>
+                    </div>
+                </div>
+                <div class="album-info" style="text-align: center;">
+                    <h3 class="album-title" style="font-size: 2rem;">Adom Akyedee</h3>
+                    <p class="album-meta">Album • 18 Tracks • 2024</p>
+                    <div class="album-links" style="justify-content: center; margin-top: var(--space-md);">
+                        <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                        <a href="https://music.apple.com" target="_blank" class="album-link">Apple Music</a>
+                        <a href="https://audiomack.com" target="_blank" class="album-link">Audiomack</a>
+                        <a href="https://music.youtube.com" target="_blank" class="album-link">YouTube Music</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tracklist -->
+            <div class="tracklist-section" style="margin-top: var(--space-2xl);">
+                <h3 class="text-center" style="margin-bottom: var(--space-lg);">Tracklist</h3>
+                <div class="tour-list" id="tracklist">
+                    <!-- Tracks will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Purchase Options -->
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <h3 style="margin-bottom: var(--space-lg);">Get the Album</h3>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.paypal.com/ncp/payment/8B54CYT3A5R6L" target="_blank" class="btn btn-primary">Buy on PayPal</a>
+                    <a href="https://paystack.com/buy/obofour-raphael---adom-akyedee-digital-album-download-hyyzir" target="_blank" class="btn btn-ghost" style="background: #00c4cc; color: #000;">Buy on PayStack</a>
+                    <a href="https://forms.office.com/r/Gz0z7N0Kue" target="_blank" class="btn btn-ghost">Physical CD</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EPs Section -->
+    <section class="section" style="background: var(--color-primary);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Extended Plays</span>
+                <h2 class="section-title">EPs</h2>
+            </div>
+            
+            <div class="album-grid">
+                <div class="album-card reveal">
+                    <div class="album-cover">
+                        <img src="Asemyidikastatue.jpg" alt="Asem Yi Di Ka EP">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playEP('asem')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Asem Yi Di Ka</h3>
+                        <p class="album-meta">EP • 2024</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com/album/7jmKmxeN8Jp5Rwv04vIfDr" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://music.apple.com/gb/album/asem-yi-di-ka-ep/1743665344" target="_blank" class="album-link">Apple Music</a>
+                            <a href="https://audiomack.com/obofour-raphael/album/asem-yi-di-ka" target="_blank" class="album-link">Audiomack</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-card reveal reveal-delay-1">
+                    <div class="album-cover">
+                        <img src="afutuo.jpg" alt="Afutuo EP">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playEP('afutuo')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Afutuo</h3>
+                        <p class="album-meta">EP • 2024</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com/album/0SWcGpieUpbmnvxuWWDoE4" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://music.apple.com/gb/album/afutuo-ep/1712647280" target="_blank" class="album-link">Apple Music</a>
+                            <a href="https://audiomack.com/obofour-raphael/album/afutuo" target="_blank" class="album-link">Audiomack</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Singles Section -->
+    <section class="section" style="background: var(--color-secondary);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Singles</span>
+                <h2 class="section-title">Featured Tracks</h2>
+            </div>
+            
+            <div class="album-grid">
+                <div class="album-card reveal">
+                    <div class="album-cover">
+                        <img src="yesu.jpg" alt="Yesu">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playSingle('yesu')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Yesu</h3>
+                        <p class="album-meta">Single • ft. Morris Babyface</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://music.apple.com" target="_blank" class="album-link">Apple Music</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-card reveal reveal-delay-1">
+                    <div class="album-cover">
+                        <img src="obaa.jpg" alt="Obaa">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playSingle('obaa')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Obaa</h3>
+                        <p class="album-meta">Single</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://audiomack.com" target="_blank" class="album-link">Audiomack</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-card reveal reveal-delay-2">
+                    <div class="album-cover">
+                        <img src="efienipa.jpg" alt="Efie Nipa">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playSingle('efienipa')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Efie Nipa</h3>
+                        <p class="album-meta">Single</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://music.apple.com" target="_blank" class="album-link">Apple Music</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-card reveal reveal-delay-3">
+                    <div class="album-cover">
+                        <img src="OBO4RAPHAEL.jpg" alt="Wosowoho">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playSingle('wosowoho')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Wosowoho</h3>
+                        <p class="album-meta">Single • ft. Tillie Gya</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://audiomack.com" target="_blank" class="album-link">Audiomack</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Streaming Links -->
+    <section class="section">
+        <div class="container text-center">
+            <div class="section-header reveal">
+                <span class="section-label">Listen On</span>
+                <h2 class="section-title">All Platforms</h2>
+            </div>
+            
+            <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);">
+                <a href="https://open.spotify.com" target="_blank" class="btn btn-ghost" style="background: #1DB954; border-color: #1DB954;">
+                    Spotify
+                </a>
+                <a href="https://music.apple.com" target="_blank" class="btn btn-ghost" style="background: #FA243C; border-color: #FA243C;">
+                    Apple Music
+                </a>
+                <a href="https://audiomack.com" target="_blank" class="btn btn-ghost" style="background: #000; border-color: #fff;">
+                    Audiomack
+                </a>
+                <a href="https://music.youtube.com" target="_blank" class="btn btn-ghost" style="background: #FF0000; border-color: #FF0000;">
+                    YouTube Music
+                </a>
+                <a href="https://soundcloud.com" target="_blank" class="btn btn-ghost" style="background: #FF5500; border-color: #FF5500;">
+                    SoundCloud
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="obofourlogoo.png" alt="Obofour Raphael">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="videos.html" class="footer-link">Videos</a>
+                    <a href="tour.html" class="footer-link">Tour</a>
+                    <a href="store.html" class="footer-link">Store</a>
+                    <a href="news.html" class="footer-link">News</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Obofour Raphael. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Player -->
+    <div class="music-player" id="music-player">
+        <div class="player-container">
+            <div class="player-track">
+                <img src="AdomAkyedee.JPG" alt="Now Playing" class="player-cover" id="player-cover">
+                <div class="player-info">
+                    <div class="player-title" id="player-title">Select a track</div>
+                    <div class="player-artist" id="player-artist">Obofour Raphael</div>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button class="player-btn" id="player-prev">⏮</button>
+                <button class="player-btn play" id="player-play">▶</button>
+                <button class="player-btn" id="player-next">⏭</button>
+            </div>
+            <div class="player-progress">
+                <span class="player-time" id="player-current">0:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="player-time" id="player-duration">0:00</span>
+            </div>
+            <div class="player-volume">
+                <button class="volume-btn" id="volume-btn">🔊</button>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="80">
+            </div>
+            <button class="player-close" id="player-close">✕</button>
+        </div>
+        <audio id="audio-player"></audio>
+    </div>
+
+    <script>
+        // Track Data
+        const tracks = [
+            { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife-[AudioTrimmer.com].mp3", duration: "3:45" },
+            { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)-[AudioTrimmer.com].mp3", duration: "4:02" },
+            { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)-[AudioTrimmer.com].mp3", duration: "3:58" },
+            { title: "04. Obaa", src: "assets/audio/04. Obaa-[AudioTrimmer.com].mp3", duration: "4:15" },
+            { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom-[AudioTrimmer.com].mp3", duration: "3:52" },
+            { title: "06. Tete Wo Ba Yie (ft. KK Kabobo)", src: "assets/audio/06. Tete Wo Ba Yie (ft. KK Kabobo)-[AudioTrimmer.com].mp3", duration: "4:08" },
+            { title: "07. Ahoofe (Jazz)", src: "assets/audio/07. Ahoofe (Jazz)-[AudioTrimmer.com].mp3", duration: "4:20" },
+            { title: "08. Ebibiman (ft. Sadat X & Nana Ama)", src: "assets/audio/08. Ebibiman (ft. Sadat X & Nana Ama)-[AudioTrimmer.com].mp3", duration: "3:55" },
+            { title: "09. Afutuo (ft. Swazy B)", src: "assets/audio/09. Afutuo (ft. Swazy B)-[AudioTrimmer.com].mp3", duration: "4:12" },
+            { title: "10. Ohia Ye Adambo", src: "assets/audio/10. Ohia Ye Adambo-[AudioTrimmer.com].mp3", duration: "3:48" },
+            { title: "11. Emmanuel", src: "assets/audio/11. Emmanuel-[AudioTrimmer.com].mp3", duration: "3:30" },
+            { title: "12. Miss Pearl (Skit)", src: "assets/audio/12. Miss Pearl (Skit)-[AudioTrimmer.com].mp3", duration: "2:15" },
+            { title: "13. Efie Nipa", src: "assets/audio/13. Efie Nipa-[AudioTrimmer.com].mp3", duration: "4:05" },
+            { title: "14. Breakfast", src: "assets/audio/14. Breakfast-[AudioTrimmer.com].mp3", duration: "3:42" },
+            { title: "15. Asew P45 (ft. George Jahraa)", src: "assets/audio/15. Asew P45 (ft. George Jahraa)-[AudioTrimmer.com].mp3", duration: "4:18" },
+            { title: "16. Abena Konadu", src: "assets/audio/16. Abena Konadu-[AudioTrimmer.com].mp3", duration: "4:25" },
+            { title: "17. Yesu (ft. Morris Babyface)", src: "assets/audio/17. Yesu (ft. Morris Babyface)-[AudioTrimmer.com].mp3", duration: "4:30" },
+            { title: "18. Outro", src: "assets/audio/18. Outro-[AudioTrimmer.com].mp3", duration: "2:45" }
+        ];
+
+        // Generate Tracklist
+        const tracklistEl = document.getElementById('tracklist');
+        tracks.forEach((track, index) => {
+            const item = document.createElement('div');
+            item.className = 'tour-item';
+            item.style.cursor = 'pointer';
+            item.onclick = () => playTrack(index);
+            item.innerHTML = `
+                <div class="tour-date" style="min-width: 60px;">
+                    <div class="tour-day" style="font-size: 1.2rem;">${index + 1}</div>
+                </div>
+                <div class="tour-details">
+                    <div class="tour-venue">${track.title}</div>
+                </div>
+                <div class="tour-action">
+                    <button class="btn btn-ghost" style="padding: var(--space-xs) var(--space-md); font-size: 0.8rem;">▶ Play</button>
+                </div>
+            `;
+            tracklistEl.appendChild(item);
+        });
+
+        // Player
+        let currentTrackIndex = 0;
+        let isPlaying = false;
+        const audioPlayer = document.getElementById('audio-player');
+        const musicPlayer = document.getElementById('music-player');
+
+        function playTrack(index) {
+            currentTrackIndex = index;
+            loadTrack(tracks[currentTrackIndex]);
+            audioPlayer.play();
+            isPlaying = true;
+            updatePlayButton();
+            musicPlayer.classList.add('active');
+        }
+
+        function playFullAlbum() {
+            currentTrackIndex = 0;
+            playTrack(0);
+        }
+
+        function playSingle(name) {
+            const singles = {
+                'yesu': { title: 'Yesu', src: 'yesu.mp3', cover: 'yesu.jpg' },
+                'obaa': { title: 'Obaa', src: 'obaa.mp3', cover: 'obaa.jpg' },
+                'efienipa': { title: 'Efie Nipa', src: 'efienipa.mp3', cover: 'efienipa.jpg' },
+                'wosowoho': { title: 'Wosowoho', src: 'wosowoho.wav', cover: 'OBO4RAPHAEL.jpg' },
+                'asem': { title: 'Asem Yi Di Ka EP', src: '', cover: 'Asemyidikastatue.jpg' },
+                'afutuo': { title: 'Afutuo EP', src: '', cover: 'afutuo.jpg' }
+            };
+            
+            if (singles[name].src) {
+                document.getElementById('player-title').textContent = singles[name].title;
+                document.getElementById('player-cover').src = singles[name].cover;
+                audioPlayer.src = singles[name].src;
+                audioPlayer.play();
+                isPlaying = true;
+                updatePlayButton();
+                musicPlayer.classList.add('active');
+            } else {
+                alert('Stream on Spotify or Apple Music');
+            }
+        }
+
+        function loadTrack(track) {
+            document.getElementById('player-title').textContent = track.title;
+            document.getElementById('player-cover').src = 'AdomAkyedee.JPG';
+            audioPlayer.src = track.src;
+        }
+
+        function updatePlayButton() {
+            document.getElementById('player-play').textContent = isPlaying ? '⏸' : '▶';
+        }
+
+        document.getElementById('player-play').addEventListener('click', function() {
+            isPlaying = !isPlaying;
+            isPlaying ? audioPlayer.play() : audioPlayer.pause();
+            updatePlayButton();
+        });
+
+        document.getElementById('player-next').addEventListener('click', function() {
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+            playTrack(currentTrackIndex);
+        });
+
+        document.getElementById('player-prev').addEventListener('click', function() {
+            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+            playTrack(currentTrackIndex);
+        });
+
+        document.getElementById('player-close').addEventListener('click', function() {
+            musicPlayer.classList.remove('active');
+            audioPlayer.pause();
+            isPlaying = false;
+            updatePlayButton();
+        });
+
+        audioPlayer.addEventListener('ended', function() {
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+            playTrack(currentTrackIndex);
+        });
+
+        audioPlayer.addEventListener('timeupdate', function() {
+            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            document.getElementById('progress-fill').style.width = (progress || 0) + '%';
+            document.getElementById('player-current').textContent = formatTime(audioPlayer.currentTime);
+            document.getElementById('player-duration').textContent = formatTime(audioPlayer.duration) || '0:00';
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + (secs < 10 ? '0' : '') + secs;
+        }
+
+        document.getElementById('progress-bar').addEventListener('click', function(e) {
+            const rect = this.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            audioPlayer.currentTime = percent * audioPlayer.duration;
+        });
+
+        document.getElementById('volume-slider').addEventListener('input', function() {
+            audioPlayer.volume = this.value / 100;
+        });
+
+        // Page Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('page-loader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Mobile Menu
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>

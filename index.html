@@ -3,40 +3,538 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Obofour Raphael's Official Website</title>
-    <meta name="description" content="Official website of musician Obofour Raphael. Discover his biography, videos, discography, and more.">
-    <meta property="og:title" content="Welcome to Obofour Raphael's Official Website">
-    <meta property="og:description" content="Official website of musician Obofour Raphael. Discover his biography, videos, discography, and more.">
+    <title>Obofour Raphael | Official Website</title>
+    <meta name="description" content="Welcome to the official website of Obofour Raphael - Ghanaian Gospel Artist. Discover his music, videos, tour dates, and exclusive merchandise.">
+    <meta property="og:title" content="Obofour Raphael | Official Website">
+    <meta property="og:description" content="Experience the music of Obofour Raphael - Ghana's finest gospel artist.">
     <meta property="og:image" content="ObofourThumb.jpg">
-    <meta property="og:image:alt" content="Obofour Raphael Official Website Thumbnail">
     <meta property="og:url" content="https://obo4raphael.com">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Obofour Raphael Official Website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Welcome to Obofour Raphael's Official Website">
-    <meta name="twitter:description" content="Official website of musician Obofour Raphael. Discover his biography, videos, discography, and more.">
-    <meta name="twitter:image" content="ObofourThumb.jpg">
-    <meta name="twitter:image:alt" content="Obofour Raphael Official Website Thumbnail">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <style>
-        @media (max-width: 768px) {
-            body {
-                background-image: url('MOBILEBACKGROUND.jpg');
-                background-position: 50% 20%;
-                background-size: contain;
-                background-repeat: no-repeat;
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="obofourlogoo.png">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <img src="obofourlogoo.png" alt="Obofour Raphael" class="loader-logo">
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="obofourlogoo.png" alt="Obofour Raphael">
+            </a>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link active">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="music.html" class="navbar-link">Music</a>
+                <a href="videos.html" class="navbar-link">Videos</a>
+                <a href="tour.html" class="navbar-link">Tour</a>
+                <a href="store.html" class="navbar-link">Store</a>
+                <a href="news.html" class="navbar-link">News</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="OBOFOURENTRY.jpg" alt="Obofour Raphael">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title gradient-text">OBO4RAPHAEL</h1>
+            <p class="hero-subtitle">Ghanaian Gospel Icon</p>
+            <p class="hero-description">Silvanus Raphael Oduro Dickson - blending traditional Ghanaian rhythms with contemporary gospel sounds. Faith, music, and cultural pride.</p>
+            <div class="hero-buttons">
+                <a href="music.html" class="btn btn-primary">Listen Now</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Music Section -->
+    <section class="section featured-music">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Latest Release</span>
+                <h2 class="section-title">Adom Akyedee</h2>
+            </div>
+            
+            <div class="album-grid">
+                <!-- Adom Akyedee Album -->
+                <div class="album-card reveal">
+                    <div class="album-cover">
+                        <img src="AdomAkyedee.JPG" alt="Adom Akyedee Album">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playAlbum('adom')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Adom Akyedee</h3>
+                        <p class="album-meta">Album • 18 Tracks</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://music.apple.com" target="_blank" class="album-link">Apple Music</a>
+                            <a href="https://audiomack.com" target="_blank" class="album-link">Audiomack</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yesu Single -->
+                <div class="album-card reveal reveal-delay-1">
+                    <div class="album-cover">
+                        <img src="yesu.jpg" alt="Yesu Single">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playSingle('yesu')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Yesu</h3>
+                        <p class="album-meta">Single • ft. Morris Babyface</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://music.apple.com" target="_blank" class="album-link">Apple Music</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Obaa Single -->
+                <div class="album-card reveal reveal-delay-2">
+                    <div class="album-cover">
+                        <img src="obaa.jpg" alt="Obaa Single">
+                        <div class="album-overlay">
+                            <button class="album-play-btn" onclick="playSingle('obaa')">▶</button>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Obaa</h3>
+                        <p class="album-meta">Single</p>
+                        <div class="album-links">
+                            <a href="https://open.spotify.com" target="_blank" class="album-link">Spotify</a>
+                            <a href="https://audiomack.com" target="_blank" class="album-link">Audiomack</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <a href="music.html" class="btn btn-ghost">View All Music</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="section video-gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Watch</span>
+                <h2 class="section-title">Latest Videos</h2>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card reveal" data-video="Y0LYvUhpEGk">
+                    <img src="https://img.youtube.com/vi/Y0LYvUhpEGk/maxresdefault.jpg" alt="Efie Nipa Official Video">
+                    <div class="video-info">
+                        <h3 class="video-title">Efie Nipa (Official Music Video)</h3>
+                        <span class="video-date">2024</span>
+                    </div>
+                </div>
+                
+                <div class="video-card reveal reveal-delay-1" data-video="I9oAT5F_BCw">
+                    <img src="https://img.youtube.com/vi/I9oAT5F_BCw/maxresdefault.jpg" alt="Konkonsa ft XLNC">
+                    <div class="video-info">
+                        <h3 class="video-title">Konkonsa ft XLNC</h3>
+                        <span class="video-date">2024</span>
+                    </div>
+                </div>
+                
+                <div class="video-card reveal reveal-delay-2" data-video="SqXzX-48-Yg">
+                    <img src="https://img.youtube.com/vi/SqXzX-48-Yg/maxresdefault.jpg" alt="Music Session">
+                    <div class="video-info">
+                        <h3 class="video-title">Music Session</h3>
+                        <span class="video-date">2024</span>
+                    </div>
+                </div>
+                
+                <div class="video-card reveal reveal-delay-3" data-video="IB3OV2CdhB4">
+                    <img src="https://img.youtube.com/vi/IB3OV2CdhB4/maxresdefault.jpg" alt="Behind the Scenes">
+                    <div class="video-info">
+                        <h3 class="video-title">Behind the Scenes - Making of Yesu</h3>
+                        <span class="video-date">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <a href="videos.html" class="btn btn-ghost">View All Videos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section class="section merch-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Shop</span>
+                <h2 class="section-title">Official Merchandise</h2>
+            </div>
+            
+            <div class="merch-grid">
+                <div class="merch-card reveal">
+                    <div class="merch-image">
+                        <img src="blackyesuhoodie.jpg" alt="Black Yesu Hoodie">
+                        <span class="merch-badge">Best Seller</span>
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">Black Yesu Hoodie</h3>
+                        <p class="merch-price">₵120</p>
+                        <button class="merch-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="merch-card reveal reveal-delay-1">
+                    <div class="merch-image">
+                        <img src="blackyesumerch.jpg" alt="Black Yesu T-Shirt">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">Black Yesu T-Shirt</h3>
+                        <p class="merch-price">₵120</p>
+                        <button class="merch-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="merch-card reveal reveal-delay-2">
+                    <div class="merch-image">
+                        <img src="redyesumerch.jpg" alt="Red Yesu T-Shirt">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">Red Yesu T-Shirt</h3>
+                        <p class="merch-price">₵120</p>
+                        <button class="merch-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="merch-card reveal reveal-delay-3">
+                    <div class="merch-image">
+                        <img src="whiteyesumerch.jpg" alt="White Yesu T-Shirt">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-title">White Yesu T-Shirt</h3>
+                        <p class="merch-price">₵120</p>
+                        <button class="merch-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <a href="store.html" class="btn btn-ghost">Shop All</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-content reveal">
+                <h2 class="newsletter-title">Join the Movement</h2>
+                <p class="newsletter-text">Subscribe to get exclusive updates, behind-the-scenes content, and early access to new releases.</p>
+                <form class="newsletter-form" onsubmit="return subscribeNewsletter(event)">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="section" style="background: var(--color-secondary);">
+        <div class="container text-center">
+            <h2 class="section-title" style="margin-bottom: var(--space-lg);">Follow Obofour Raphael</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/kwahuboy" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="https://x.com/therealobofour" target="_blank" class="social-link" aria-label="X">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/therealobofour" target="_blank" class="social-link" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@officialobofourtv" target="_blank" class="social-link" aria-label="YouTube">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#000"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@obo4raphael" target="_blank" class="social-link" aria-label="TikTok">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="obofourlogoo.png" alt="Obofour Raphael">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="videos.html" class="footer-link">Videos</a>
+                    <a href="tour.html" class="footer-link">Tour</a>
+                    <a href="store.html" class="footer-link">Store</a>
+                    <a href="news.html" class="footer-link">News</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Obofour Raphael. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Music Player -->
+    <div class="music-player" id="music-player">
+        <div class="player-container">
+            <div class="player-track">
+                <img src="AdomAkyedee.JPG" alt="Now Playing" class="player-cover" id="player-cover">
+                <div class="player-info">
+                    <div class="player-title" id="player-title">Adom Akyedee</div>
+                    <div class="player-artist" id="player-artist">Obofour Raphael</div>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button class="player-btn" id="player-prev">⏮</button>
+                <button class="player-btn play" id="player-play">▶</button>
+                <button class="player-btn" id="player-next">⏭</button>
+            </div>
+            <div class="player-progress">
+                <span class="player-time" id="player-current">0:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="player-time" id="player-duration">0:00</span>
+            </div>
+            <div class="player-volume">
+                <button class="volume-btn" id="volume-btn">🔊</button>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="80">
+            </div>
+            <button class="player-close" id="player-close">✕</button>
+        </div>
+        <audio id="audio-player"></audio>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal-overlay" id="video-modal">
+        <div class="modal-content" style="max-width: 900px; padding: 0;">
+            <button class="modal-close" id="modal-close">✕</button>
+            <div id="video-container"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Page Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('page-loader').classList.add('hidden');
+            }, 2000);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
             }
         }
-    </style>
-</head>
-<body style="background: url('OPENLANDSCAPE.jpg') no-repeat 50% 20%; background-size: contain; height: 100vh; margin: 0; position: relative;">
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <main id="main-content" style="position: absolute; bottom: 10%; right: 20%; text-align: right; color: white; z-index: 1;">
-        <a href="home.html" style="background: linear-gradient(135deg, #D4AF37 0%, #F4E87C 100%); color: #0b0b0b; padding: 1.2rem 3rem; text-decoration: none; font-size: 1.4rem; font-weight: 600; border-radius: 50px; display: inline-block; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4); border: 2px solid rgba(255,255,255,0.2); margin: 0;" role="button" tabindex="0" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(212, 175, 55, 0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(212, 175, 55, 0.4)';">Enter Now</a>
-    </main>
-    <script src="scripts/main.js"></script>
+        window.addEventListener('scroll', reveal);
+
+        // Video Modal
+        const videoCards = document.querySelectorAll('.video-card');
+        const videoModal = document.getElementById('video-modal');
+        const videoContainer = document.getElementById('video-container');
+        const modalClose = document.getElementById('modal-close');
+
+        videoCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video');
+                videoContainer.innerHTML = `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        modalClose.addEventListener('click', closeVideoModal);
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === videoModal) closeVideoModal();
+        });
+
+        function closeVideoModal() {
+            videoModal.classList.remove('active');
+            videoContainer.innerHTML = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Newsletter Form
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing! You will receive exclusive updates soon.');
+            e.target.reset();
+            return false;
+        }
+
+        // Audio Player
+        const albumTracks = [
+            { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife-[AudioTrimmer.com].mp3" },
+            { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)-[AudioTrimmer.com].mp3" },
+            { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)-[AudioTrimmer.com].mp3" },
+            { title: "04. Obaa", src: "assets/audio/04. Obaa-[AudioTrimmer.com].mp3" },
+            { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom-[AudioTrimmer.com].mp3" }
+        ];
+
+        let currentTrackIndex = 0;
+        let isPlaying = false;
+        const audioPlayer = document.getElementById('audio-player');
+        const musicPlayer = document.getElementById('music-player');
+
+        function playAlbum(album) {
+            currentTrackIndex = 0;
+            loadTrack(albumTracks[currentTrackIndex]);
+            audioPlayer.play();
+            isPlaying = true;
+            updatePlayButton();
+            musicPlayer.classList.add('active');
+        }
+
+        function playSingle(single) {
+            const singles = {
+                'yesu': { title: 'Yesu', src: 'yesu.mp3', cover: 'yesu.jpg' },
+                'obaa': { title: 'Obaa', src: 'obaa.mp3', cover: 'obaa.jpg' }
+            };
+            const track = singles[single];
+            document.getElementById('player-title').textContent = track.title;
+            document.getElementById('player-cover').src = track.cover;
+            audioPlayer.src = track.src;
+            audioPlayer.play();
+            isPlaying = true;
+            updatePlayButton();
+            musicPlayer.classList.add('active');
+        }
+
+        function loadTrack(track) {
+            document.getElementById('player-title').textContent = track.title;
+            audioPlayer.src = track.src;
+        }
+
+        function updatePlayButton() {
+            document.getElementById('player-play').textContent = isPlaying ? '⏸' : '▶';
+        }
+
+        document.getElementById('player-play').addEventListener('click', function() {
+            if (isPlaying) {
+                audioPlayer.pause();
+            } else {
+                audioPlayer.play();
+            }
+            isPlaying = !isPlaying;
+            updatePlayButton();
+        });
+
+        document.getElementById('player-next').addEventListener('click', function() {
+            currentTrackIndex = (currentTrackIndex + 1) % albumTracks.length;
+            loadTrack(albumTracks[currentTrackIndex]);
+            if (isPlaying) audioPlayer.play();
+        });
+
+        document.getElementById('player-prev').addEventListener('click', function() {
+            currentTrackIndex = (currentTrackIndex - 1 + albumTracks.length) % albumTracks.length;
+            loadTrack(albumTracks[currentTrackIndex]);
+            if (isPlaying) audioPlayer.play();
+        });
+
+        document.getElementById('player-close').addEventListener('click', function() {
+            musicPlayer.classList.remove('active');
+            audioPlayer.pause();
+            isPlaying = false;
+            updatePlayButton();
+        });
+
+        audioPlayer.addEventListener('timeupdate', function() {
+            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+            
+            const current = formatTime(audioPlayer.currentTime);
+            const duration = formatTime(audioPlayer.duration);
+            document.getElementById('player-current').textContent = current;
+            document.getElementById('player-duration').textContent = duration || '0:00';
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + (secs < 10 ? '0' : '') + secs;
+        }
+
+        document.getElementById('progress-bar').addEventListener('click', function(e) {
+            const rect = this.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            audioPlayer.currentTime = percent * audioPlayer.duration;
+        });
+
+        document.getElementById('volume-slider').addEventListener('input', function() {
+            audioPlayer.volume = this.value / 100;
+        });
+    </script>
 </body>
 </html>
