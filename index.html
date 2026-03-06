@@ -364,26 +364,13 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script>
-        // Page Loader - Use DOMContentLoaded for faster hiding
-        document.addEventListener('DOMContentLoaded', function() {
-            // Hide loader after a short delay to allow CSS to render
-            setTimeout(function() {
-                var loader = document.getElementById('page-loader');
-                if (loader) {
-                    loader.classList.add('hidden');
-                }
-            }, 1500);
-        });
-
-        // Fallback: Hide loader after max 5 seconds regardless
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                var loader = document.getElementById('page-loader');
-                if (loader) {
-                    loader.classList.add('hidden');
-                }
-            }, 500);
-        });
+        // Page Loader - Hide after exactly 2 seconds, no waiting for resources
+        setTimeout(function() {
+            var loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.classList.add('hidden');
+            }
+        }, 2000);
 
         // Navbar Scroll Effect
         window.addEventListener('scroll', function() {
