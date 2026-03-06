@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Club | Obofour Raphael</title>
+    <meta name="description" content="Join the official Obofour Raphael Fan Club - exclusive content, fan events, and community.">
+    <meta property="og:title" content="Fan Club | Obofour Raphael">
+    <meta property="og:description" content="Join the official Obofour Raphael Fan Club.">
+    <meta property="og:image" content="ObofourThumb.jpg">
+    <meta property="og:url" content="https://obo4raphael.com/fanclub.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="obofourlogoo.png">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <img src="obofourlogoo.png" alt="Obofour Raphael" class="loader-logo">
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="obofourlogoo.png" alt="Obofour Raphael">
+            </a>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="music.html" class="navbar-link">Music</a>
+                <a href="videos.html" class="navbar-link">Videos</a>
+                <a href="tour.html" class="navbar-link">Tour</a>
+                <a href="store.html" class="navbar-link">Store</a>
+                <a href="news.html" class="navbar-link">News</a>
+                <a href="fanclub.html" class="navbar-link active">Fan Club</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-background">
+            <img src="OBOFOURENTRY.jpg" alt="Fan Club">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title gradient-text">FAN CLUB</h1>
+            <p class="hero-subtitle">Join the OBO4Family</p>
+            <p class="hero-description">Connect with fellow fans, get exclusive content, and be part of a community that celebrates faith and music.</p>
+        </div>
+    </section>
+
+    <!-- Fan Club Benefits -->
+    <section class="section" style="background: var(--color-secondary);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Exclusive</span>
+                <h2 class="section-title">Member Benefits</h2>
+            </div>
+            
+            <div class="album-grid">
+                <div class="album-card reveal">
+                    <div class="album-cover" style="display: flex; align-items: center; justify-content: center; background: var(--color-tertiary);">
+                        <span style="font-size: 4rem;">🎵</span>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Early Access</h3>
+                        <p class="album-meta">Get early access to new releases, music videos, and exclusive content before anyone else.</p>
+                    </div>
+                </div>
+
+                <div class="album-card reveal reveal-delay-1">
+                    <div class="album-cover" style="display: flex; align-items: center; justify-content: center; background: var(--color-tertiary);">
+                        <span style="font-size: 4rem;">🎟️</span>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Priority Tickets</h3>
+                        <p class="album-meta">Priority access to concert tickets and exclusive meet-and-greet opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="album-card reveal reveal-delay-2">
+                    <div class="album-cover" style="display: flex; align-items: center; justify-content: center; background: var(--color-tertiary);">
+                        <span style="font-size: 4rem;">👕</span>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Exclusive Merch</h3>
+                        <p class="album-meta">Access to fan club exclusive merchandise and limited edition items.</p>
+                    </div>
+                </div>
+
+                <div class="album-card reveal reveal-delay-3">
+                    <div class="album-cover" style="display: flex; align-items: center; justify-content: center; background: var(--color-tertiary);">
+                        <span style="font-size: 4rem;">💬</span>
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">Community</h3>
+                        <p class="album-meta">Connect with fellow fans from around the world in our exclusive fan community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-content reveal">
+                <h2 class="newsletter-title">Join the OBO4Family</h2>
+                <p class="newsletter-text">Subscribe to our fan club newsletter to get exclusive updates, behind-the-scenes content, and be the first to know about upcoming releases and events.</p>
+                <form class="newsletter-form" onsubmit="return subscribeFanClub(event)">
+                    <input type="text" class="newsletter-input" placeholder="Enter your name" required>
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Join Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="section" style="background: var(--color-secondary);">
+        <div class="container text-center">
+            <div class="section-header reveal">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Join the Community</h2>
+            </div>
+            
+            <p style="max-width: 600px; margin: 0 auto var(--space-xl);">Follow Obofour Raphael on social media and join our fan communities to stay connected with other fans.</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/kwahuboy" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="https://x.com/therealobofour" target="_blank" class="social-link" aria-label="X">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/therealobofour" target="_blank" class="social-link" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@obo4raphael" target="_blank" class="social-link" aria-label="TikTok">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="obofourlogoo.png" alt="Obofour Raphael">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="music.html" class="footer-link">Music</a>
+                    <a href="videos.html" class="footer-link">Videos</a>
+                    <a href="tour.html" class="footer-link">Tour</a>
+                    <a href="store.html" class="footer-link">Store</a>
+                    <a href="news.html" class="footer-link">News</a>
+                    <a href="fanclub.html" class="footer-link">Fan Club</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Obofour Raphael. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function subscribeFanClub(e) {
+            e.preventDefault();
+            alert('Welcome to the OBO4Family! You will receive exclusive updates soon.');
+            e.target.reset();
+            return false;
+        }
+
+        // Page Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('page-loader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>
