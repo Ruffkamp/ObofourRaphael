@@ -261,11 +261,24 @@
     </footer>
 
     <script>
-        // Page Loader
+        // Page Loader - Use DOMContentLoaded for faster hiding
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.classList.add('hidden');
+                }
+            }, 1500);
+        });
+
+        // Fallback: Hide loader after max 5 seconds regardless
         window.addEventListener('load', function() {
             setTimeout(function() {
-                document.getElementById('page-loader').classList.add('hidden');
-            }, 1500);
+                var loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.classList.add('hidden');
+                }
+            }, 500);
         });
 
         // Mobile Menu Toggle
