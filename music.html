@@ -19,6 +19,15 @@
     <link rel="icon" type="image/png" href="obofourlogoo.png">
 </head>
 <body>
+    <!-- Page Loader - Hide after exactly 2 seconds, no waiting for resources -->
+    <script>
+        setTimeout(function() {
+            var loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.classList.add('hidden');
+            }
+        }, 2000);
+    </script>
     <!-- Page Loader -->
     <div class="page-loader" id="page-loader">
         <div class="loader-content">
@@ -469,14 +478,6 @@
         document.getElementById('volume-slider').addEventListener('input', function() {
             audioPlayer.volume = this.value / 100;
         });
-
-        // Page Loader - Hide after exactly 2 seconds, no waiting for resources
-        setTimeout(function() {
-            var loader = document.getElementById('page-loader');
-            if (loader) {
-                loader.classList.add('hidden');
-            }
-        }, 2000);
 
         // Mobile Menu
         document.getElementById('navbar-toggle').addEventListener('click', function() {
