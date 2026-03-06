@@ -366,170 +366,181 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const navbarToggle = document.getElementById('navbar-toggle');
+            if (navbarToggle) {
+                navbarToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    document.getElementById('navbar-menu').classList.toggle('active');
+                });
             }
-        });
 
-        // Mobile Menu Toggle
-        document.getElementById('navbar-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.getElementById('navbar-menu').classList.toggle('active');
-        });
-
-        // Scroll Reveal
-        function reveal() {
-            var reveals = document.querySelectorAll('.reveal');
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add('active');
+            // Scroll Reveal
+            function reveal() {
+                var reveals = document.querySelectorAll('.reveal');
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add('active');
+                    }
                 }
             }
-        }
-        window.addEventListener('scroll', reveal);
+            window.addEventListener('scroll', reveal);
 
-        // Video Modal
-        const videoCards = document.querySelectorAll('.video-card');
-        const videoModal = document.getElementById('video-modal');
-        const videoContainer = document.getElementById('video-container');
-        const modalClose = document.getElementById('modal-close');
+            // Video Modal
+            const videoCards = document.querySelectorAll('.video-card');
+            const videoModal = document.getElementById('video-modal');
+            const videoContainer = document.getElementById('video-container');
+            const modalClose = document.getElementById('modal-close');
 
-        videoCards.forEach(card => {
-            card.addEventListener('click', function() {
-                const videoId = this.getAttribute('data-video');
-                videoContainer.innerHTML = `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-                videoModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
+            videoCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const videoId = this.getAttribute('data-video');
+                    videoContainer.innerHTML = `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    videoModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
             });
-        });
 
-        modalClose.addEventListener('click', closeVideoModal);
-        videoModal.addEventListener('click', function(e) {
-            if (e.target === videoModal) closeVideoModal();
-        });
-
-        function closeVideoModal() {
-            videoModal.classList.remove('active');
-            videoContainer.innerHTML = '';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Newsletter Form
-        function subscribeNewsletter(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing! You will receive exclusive updates soon.');
-            e.target.reset();
-            return false;
-        }
-
-        // Audio Player
-        const albumTracks = [
-            { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife-[AudioTrimmer.com].mp3" },
-            { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)-[AudioTrimmer.com].mp3" },
-            { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)-[AudioTrimmer.com].mp3" },
-            { title: "04. Obaa", src: "assets/audio/04. Obaa-[AudioTrimmer.com].mp3" },
-            { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom-[AudioTrimmer.com].mp3" }
-        ];
-
-        let currentTrackIndex = 0;
-        let isPlaying = false;
-        const audioPlayer = document.getElementById('audio-player');
-        const musicPlayer = document.getElementById('music-player');
-
-        function playAlbum(album) {
-            currentTrackIndex = 0;
-            loadTrack(albumTracks[currentTrackIndex]);
-            audioPlayer.play();
-            isPlaying = true;
-            updatePlayButton();
-            musicPlayer.classList.add('active');
-        }
-
-        function playSingle(single) {
-            const singles = {
-                'yesu': { title: 'Yesu', src: 'yesu.mp3', cover: 'yesu.jpg' },
-                'obaa': { title: 'Obaa', src: 'obaa.mp3', cover: 'obaa.jpg' }
-            };
-            const track = singles[single];
-            document.getElementById('player-title').textContent = track.title;
-            document.getElementById('player-cover').src = track.cover;
-            audioPlayer.src = track.src;
-            audioPlayer.play();
-            isPlaying = true;
-            updatePlayButton();
-            musicPlayer.classList.add('active');
-        }
-
-        function loadTrack(track) {
-            document.getElementById('player-title').textContent = track.title;
-            audioPlayer.src = track.src;
-        }
-
-        function updatePlayButton() {
-            document.getElementById('player-play').textContent = isPlaying ? '⏸' : '▶';
-        }
-
-        document.getElementById('player-play').addEventListener('click', function() {
-            if (isPlaying) {
-                audioPlayer.pause();
-            } else {
-                audioPlayer.play();
+            if (modalClose) {
+                modalClose.addEventListener('click', closeVideoModal);
             }
-            isPlaying = !isPlaying;
-            updatePlayButton();
-        });
+            if (videoModal) {
+                videoModal.addEventListener('click', function(e) {
+                    if (e.target === videoModal) closeVideoModal();
+                });
+            }
 
-        document.getElementById('player-next').addEventListener('click', function() {
-            currentTrackIndex = (currentTrackIndex + 1) % albumTracks.length;
-            loadTrack(albumTracks[currentTrackIndex]);
-            if (isPlaying) audioPlayer.play();
-        });
+            function closeVideoModal() {
+                videoModal.classList.remove('active');
+                videoContainer.innerHTML = '';
+                document.body.style.overflow = 'auto';
+            }
 
-        document.getElementById('player-prev').addEventListener('click', function() {
-            currentTrackIndex = (currentTrackIndex - 1 + albumTracks.length) % albumTracks.length;
-            loadTrack(albumTracks[currentTrackIndex]);
-            if (isPlaying) audioPlayer.play();
-        });
+            // Newsletter Form
+            function subscribeNewsletter(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing! You will receive exclusive updates soon.');
+                e.target.reset();
+                return false;
+            }
 
-        document.getElementById('player-close').addEventListener('click', function() {
-            musicPlayer.classList.remove('active');
-            audioPlayer.pause();
-            isPlaying = false;
-            updatePlayButton();
-        });
+            // Audio Player
+            const albumTracks = [
+                { title: "01. King Of Hiplife", src: "assets/audio/01.King Of Hiplife-[AudioTrimmer.com].mp3" },
+                { title: "02. Ahoofe (ft. Nana Ama X Kojo Cue)", src: "assets/audio/02. Ahoofe (ft. Nana Ama X Kojo Cue)-[AudioTrimmer.com].mp3" },
+                { title: "03. Woso Woho (ft. Tillie Gya)", src: "assets/audio/03. Woso Woho (ft. Tillie Gya)-[AudioTrimmer.com].mp3" },
+                { title: "04. Obaa", src: "assets/audio/04. Obaa-[AudioTrimmer.com].mp3" },
+                { title: "05. Mpaebo Nwom", src: "assets/audio/05.Mpaebo Nwom-[AudioTrimmer.com].mp3" }
+            ];
 
-        audioPlayer.addEventListener('timeupdate', function() {
-            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-            document.getElementById('progress-fill').style.width = progress + '%';
-            
-            const current = formatTime(audioPlayer.currentTime);
-            const duration = formatTime(audioPlayer.duration);
-            document.getElementById('player-current').textContent = current;
-            document.getElementById('player-duration').textContent = duration || '0:00';
-        });
+            let currentTrackIndex = 0;
+            let isPlaying = false;
+            const audioPlayer = document.getElementById('audio-player');
+            const musicPlayer = document.getElementById('music-player');
 
-        function formatTime(seconds) {
-            if (isNaN(seconds)) return '0:00';
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return mins + ':' + (secs < 10 ? '0' : '') + secs;
-        }
+            function playAlbum(album) {
+                currentTrackIndex = 0;
+                loadTrack(albumTracks[currentTrackIndex]);
+                audioPlayer.play();
+                isPlaying = true;
+                updatePlayButton();
+                musicPlayer.classList.add('active');
+            }
 
-        document.getElementById('progress-bar').addEventListener('click', function(e) {
-            const rect = this.getBoundingClientRect();
-            const percent = (e.clientX - rect.left) / rect.width;
-            audioPlayer.currentTime = percent * audioPlayer.duration;
-        });
+            function playSingle(single) {
+                const singles = {
+                    'yesu': { title: 'Yesu', src: 'yesu.mp3', cover: 'yesu.jpg' },
+                    'obaa': { title: 'Obaa', src: 'obaa.mp3', cover: 'obaa.jpg' }
+                };
+                const track = singles[single];
+                document.getElementById('player-title').textContent = track.title;
+                document.getElementById('player-cover').src = track.cover;
+                audioPlayer.src = track.src;
+                audioPlayer.play();
+                isPlaying = true;
+                updatePlayButton();
+                musicPlayer.classList.add('active');
+            }
 
-        document.getElementById('volume-slider').addEventListener('input', function() {
-            audioPlayer.volume = this.value / 100;
+            function loadTrack(track) {
+                document.getElementById('player-title').textContent = track.title;
+                audioPlayer.src = track.src;
+            }
+
+            function updatePlayButton() {
+                document.getElementById('player-play').textContent = isPlaying ? '⏸' : '▶';
+            }
+
+            document.getElementById('player-play').addEventListener('click', function() {
+                if (isPlaying) {
+                    audioPlayer.pause();
+                } else {
+                    audioPlayer.play();
+                }
+                isPlaying = !isPlaying;
+                updatePlayButton();
+            });
+
+            document.getElementById('player-next').addEventListener('click', function() {
+                currentTrackIndex = (currentTrackIndex + 1) % albumTracks.length;
+                loadTrack(albumTracks[currentTrackIndex]);
+                if (isPlaying) audioPlayer.play();
+            });
+
+            document.getElementById('player-prev').addEventListener('click', function() {
+                currentTrackIndex = (currentTrackIndex - 1 + albumTracks.length) % albumTracks.length;
+                loadTrack(albumTracks[currentTrackIndex]);
+                if (isPlaying) audioPlayer.play();
+            });
+
+            document.getElementById('player-close').addEventListener('click', function() {
+                musicPlayer.classList.remove('active');
+                audioPlayer.pause();
+                isPlaying = false;
+                updatePlayButton();
+            });
+
+            audioPlayer.addEventListener('timeupdate', function() {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                document.getElementById('progress-fill').style.width = progress + '%';
+                
+                const current = formatTime(audioPlayer.currentTime);
+                const duration = formatTime(audioPlayer.duration);
+                document.getElementById('player-current').textContent = current;
+                document.getElementById('player-duration').textContent = duration || '0:00';
+            });
+
+            function formatTime(seconds) {
+                if (isNaN(seconds)) return '0:00';
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return mins + ':' + (secs < 10 ? '0' : '') + secs;
+            }
+
+            document.getElementById('progress-bar').addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                audioPlayer.currentTime = percent * audioPlayer.duration;
+            });
+
+            document.getElementById('volume-slider').addEventListener('input', function() {
+                audioPlayer.volume = this.value / 100;
+            });
         });
     </script>
 </body>
