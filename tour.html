@@ -71,16 +71,16 @@
     <section class="section tour-section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-label">Upcoming</span>
-                <h2 class="section-title">Tour Dates</h2>
+                <span class="section-label">Updates</span>
+                <h2 class="section-title">No Upcoming Tours</h2>
             </div>
             
             <div class="tour-list" id="tour-list">
-                <!-- Tour dates will be populated here -->
+                <p class="text-center" style="color: var(--color-text-muted);">There are currently no upcoming tour dates. Check back soon for updates!</p>
             </div>
 
             <div class="text-center" style="margin-top: var(--space-xl);">
-                <p>More dates coming soon! Subscribe to get updates.</p>
+                <p>Subscribe to get updates when new tour dates are announced.</p>
             </div>
         </div>
     </section>
@@ -131,49 +131,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Obofour Raphael. All rights reserved.</p>
+                <p class="footer-copyright">© 2026 Obofour Raphael. All rights reserved.</p>
+                <p style="margin-top: 8px; font-size: 0.85rem; color: var(--color-text-muted);">Developed By Dromor Narh</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Tour Data
-        const tourDates = [
-            { day: '15', month: 'MAR', venue: 'Accra International Conference Centre', location: 'Accra, Ghana', ticketUrl: '#', status: 'available' },
-            { day: '22', month: 'MAR', venue: 'Eldorado Park', location: 'Kumasi, Ghana', ticketUrl: '#', status: 'available' },
-            { day: '05', month: 'APR', venue: 'Tema Community Centre', location: 'Tema, Ghana', ticketUrl: '#', status: 'soon' },
-            { day: '12', month: 'APR', venue: 'Takoradi Sports Stadium', location: 'Takoradi, Ghana', ticketUrl: '#', status: 'soon' },
-            { day: '20', month: 'APR', venue: 'Cape Coast Sports Complex', location: 'Cape Coast, Ghana', ticketUrl: '#', status: 'soon' }
-        ];
-
-        const tourList = document.getElementById('tour-list');
-        tourDates.forEach((date, index) => {
-            const item = document.createElement('div');
-            item.className = 'tour-item reveal';
-            item.style.animationDelay = (index * 0.1) + 's';
-            
-            let buttonHtml = '';
-            if (date.status === 'available') {
-                buttonHtml = `<a href="${date.ticketUrl}" class="btn btn-primary" style="padding: var(--space-sm) var(--space-lg);">Get Tickets</a>`;
-            } else {
-                buttonHtml = `<span class="btn btn-ghost" style="cursor: default; opacity: 0.6;">Coming Soon</span>`;
-            }
-            
-            item.innerHTML = `
-                <div class="tour-date">
-                    <div class="tour-day">${date.day}</div>
-                    <div class="tour-month">${date.month}</div>
-                </div>
-                <div class="tour-details">
-                    <div class="tour-venue">${date.venue}</div>
-                    <div class="tour-location">${date.location}</div>
-                </div>
-                <div class="tour-action">
-                    ${buttonHtml}
-                </div>
-            `;
-            tourList.appendChild(item);
-        });
+        // No tour dates - placeholder for future use
+        // const tourDates = [];
 
         function subscribeNewsletter(e) {
             e.preventDefault();
