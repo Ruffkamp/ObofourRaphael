@@ -172,9 +172,19 @@ ul, ol { list-style: none; }
 .btn:hover::before { left: 100%; }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-gold-dark) 100%);
-    color: var(--color-primary);
     border-color: var(--color-accent-gold);
+    display:inline-block;
+    padding:15px 22px;
+    margin-right:15px;
+    font-size:18px;
+    font-weight:500;
+    text-decoration:none;
+    color:#fff;
+    background: #d4af37;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:30px;
+    backdrop-filter: blur(6px);
+    transition:all 0.25s ease;
 }
 
 .btn-primary:hover {
@@ -185,9 +195,20 @@ ul, ol { list-style: none; }
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--color-text-primary);
-    border-color: var(--color-text-primary);
+    border-color: var(--color-accent-gold);
+    display:inline-block;
+    padding:15px 22px;
+    margin-right:15px;
+    font-size:18px;
+    font-weight:500;
+    text-decoration:none;
+    color:#fff;
+    background: #d4af3700;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:30px;
+    backdrop-filter: blur(6px);
+    transition:all 0.25s ease;
+    
 }
 
 .btn-secondary:hover {
@@ -197,10 +218,18 @@ ul, ol { list-style: none; }
 }
 
 .btn-ghost {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--color-text-primary);
-    border-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    display:inline-block;
+    padding:8px 16px;
+    margin-right:8px;
+    font-size:13px;
+    font-weight:500;
+    text-decoration:none;
+    color:#fff;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    backdrop-filter: blur(6px);
+    transition:all 0.25s ease;
 }
 
 .btn-ghost:hover {
@@ -458,7 +487,7 @@ ul, ol { list-style: none; }
 
 .album-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
     gap: var(--space-xl);
 }
 
@@ -532,13 +561,19 @@ ul, ol { list-style: none; }
 
 .album-links { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
 
-.album-link {
-    padding: var(--space-xs) var(--space-md);
-    font-size: 0.8rem;
-    border-radius: var(--radius-full);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--color-text-secondary);
-    transition: var(--transition-base);
+.album-link{
+    display:inline-block;
+    padding:8px 16px;
+    margin-right:8px;
+    font-size:13px;
+    font-weight:500;
+    text-decoration:none;
+    color:#fff;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    backdrop-filter: blur(6px);
+    transition:all 0.25s ease;
 }
 
 .album-link:hover {
@@ -1457,4 +1492,230 @@ ul, ol { list-style: none; }
 .credit-name {
     font-size: 1.1rem;
     color: var(--color-text-primary);
+}
+
+/* =============================== */
+/* LUXURY GOLD ALBUM PURCHASE CTA */
+/* =============================== */
+
+.luxury-cta{
+    margin-top: var(--space-xl);
+    padding: 50px 35px;
+    text-align: center;
+
+    /* champagne / pearl background instead of white */
+    background: linear-gradient(
+        145deg,
+        #f7f4ec,
+        #efe8d6,
+        #f7f4ec
+    );
+
+    border-radius: 18px;
+
+    border: 2px solid rgba(212,175,55,0.45);
+
+    box-shadow:
+        0 12px 45px rgba(0,0,0,0.35),
+        0 0 35px rgba(212,175,55,0.18);
+
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =============================== */
+/* SUBTLE BLING SHINE */
+/* =============================== */
+
+.luxury-cta::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 120%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.55),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    /* slower animation */
+    animation: shineMove 14s infinite;
+}
+
+@keyframes shineMove{
+    0%{
+        left: -150%;
+    }
+
+    60%{
+        left: 150%;
+    }
+
+    100%{
+        left: 150%;
+    }
+}
+
+
+/* =============================== */
+/* TITLE */
+/* =============================== */
+
+.cta-title{
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+
+/* =============================== */
+/* SUBTITLE */
+/* =============================== */
+
+.cta-subtitle{
+    color: #6b6b6b;
+    margin-bottom: 30px;
+}
+
+
+/* =============================== */
+/* GOLD BADGE */
+/* =============================== */
+
+.cta-badge{
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #c8a23a,
+        #ffd76a
+    );
+
+    color: #111;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 14px;
+
+    box-shadow: 0 4px 14px rgba(212,175,55,0.35);
+}
+
+
+/* =============================== */
+/* BUTTON LAYOUT */
+/* =============================== */
+
+.cta-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+/* =============================== */
+/* GOLD BUTTON */
+/* =============================== */
+
+.gold-btn{
+    background: linear-gradient(
+        135deg,
+        #0250f8,
+        #926aff
+    );
+
+    color: #111;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow: 0 6px 20px rgba(212,175,55,0.35);
+
+    transition: all 0.25s ease;
+}
+
+
+/* =============================== */
+/* GOLD OUTLINE BUTTON */
+/* =============================== */
+
+.gold-outline{
+    border: 2px solid #c8a23a;
+    background: linear-gradient(
+        135deg,
+        #c8a23a,
+        #ffd76a
+    );
+
+    color: #222;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =============================== */
+/* DARK BUTTON */
+/* =============================== */
+
+.white-btn{
+    background: #1a1a1a;
+
+    color: white;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =============================== */
+/* HOVER EFFECT */
+/* =============================== */
+
+.gold-btn:hover,
+.gold-outline:hover{
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 28px rgba(212,175,55,0.45);
+    color: cornsilk;
+}
+.white-btn:hover{
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
 }
