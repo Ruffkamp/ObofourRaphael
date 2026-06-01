@@ -17,6 +17,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/png" href="obofourlogoo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=3">
 </head>
 <body>
     <!-- Page Loader - Hide after exactly 2 seconds, no waiting for resources -->
@@ -434,6 +440,29 @@
         function playFullAlbum() {
             currentTrackIndex = 0;
             playTrack(0);
+        }
+
+        function playEP(name) {
+            const eps = {
+                'asem':   { title: 'Asem Yi Di Ka', src: 'assets/audio/Gye wo kawa.mp3', cover: 'Asemyidikastatue.jpg' },
+                'awula':  { title: 'Awula',         src: 'assets/audio/awula.mp3',       cover: 'awula.jpg' },
+                'afutuo': { title: 'Woso Woho (Afutuo EP)',  src: 'assets/audio/Woso Woho.mp3',   cover: 'afutuo.jpg' }
+            };
+
+            const ep = eps[name];
+            if (!ep) return;
+
+            if (ep.src) {
+                document.getElementById('player-title').textContent = ep.title;
+                document.getElementById('player-cover').src = ep.cover;
+                audioPlayer.src = ep.src;
+                audioPlayer.play();
+                isPlaying = true;
+                updatePlayButton();
+                musicPlayer.classList.add('active');
+            } else {
+                alert('This EP is coming soon. Stream it on Spotify or Apple Music for now!');
+            }
         }
 
         function playSingle(name) {
