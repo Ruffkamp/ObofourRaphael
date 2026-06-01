@@ -879,19 +879,27 @@ ul, ol { list-style: none; }
 .newsletter-form {
     display: flex;
     gap: var(--space-md);
-    max-width: 500px;
+    max-width: 680px;
     margin: 0 auto;
 }
 
 .newsletter-input {
     flex: 1;
+    min-width: 0; /* allow inputs to share space without overflowing */
     padding: var(--space-md) var(--space-lg);
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-full);
+    border-radius: 9999px; /* pill shape (was 50%, which made an oval) */
     color: var(--color-text-primary);
     font-size: 1rem;
     transition: var(--transition-base);
+}
+
+/* Keep the Join Now button from being squeezed thin and clipped */
+.newsletter-form .btn {
+    flex-shrink: 0;       /* stop the inputs from squashing the button */
+    white-space: nowrap;  /* keep "JOIN NOW" on one line */
+    margin-right: 0;      /* remove stray right margin from .btn-primary */
 }
 
 .newsletter-input:focus {
@@ -902,7 +910,7 @@ ul, ol { list-style: none; }
 
 .newsletter-input::placeholder { color: var(--color-text-muted); }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .newsletter-form { flex-direction: column; }
 }
 
