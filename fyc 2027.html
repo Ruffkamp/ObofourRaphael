@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYC | Obofour Raphael</title>
+    <meta name="description" content="For Your GRAMMY® Consideration — Obofour Raphael's Adom Akyedeɛ, Ahoofe and Awula, submitted across four categories.">
+    <meta property="og:title" content="For Your GRAMMY® Consideration | Obofour Raphael">
+    <meta property="og:description" content="Adom Akyedeɛ, Ahoofe and Awula — submitted for Best Global Music Album, Best Global Music Performance, Best Jazz Performance and Best African Music Performance.">
+    <meta property="og:image" content="ObofourThumb.jpg">
+    <meta property="og:url" content="https://obo4raphael.com/fyc.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="obofourlogoo.png">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=3">
+
+    <style>
+        /* ---- FYC warm palette — overrides main.css tokens for this page only ---- */
+        :root{
+            --color-primary:#FBF3E3;
+            --color-secondary:#F4E6C8;
+            --color-tertiary:#ECD7A9;
+            --color-accent-gold:#C9720C;
+            --color-accent-gold-light:#E0932E;
+            --color-accent-gold-dark:#8F5714;
+            --color-text-primary:#20150C;
+            --color-text-secondary:#4A3521;
+            --color-text-muted:#8A7355;
+        }
+        body::before{ display:none; } /* drop the dark radial glow baked into main.css */
+
+        /* ---- FYC page-specific additions (on top of main.css) ---- */
+
+        /* Real site navbar sits on a dark bar here, so force light text
+           regardless of this page's light-theme text-color overrides. */
+        .navbar-link{ color:#F4E6C8; }
+        .navbar-link:hover, .navbar-link.active{ color:var(--color-accent-gold-light); }
+        .navbar-link-fyc{ color:var(--color-accent-gold); }
+        .navbar-link-fyc:hover, .navbar-link-fyc.active{ color:#1C130A; }
+        .navbar-toggle span{ background:#F4E6C8; }
+
+        /* Cinematic opening hero: dark portrait fading into the warm palette */
+        .fyc-cinematic-hero .hero-content{ display:flex; flex-direction:column; align-items:center; }
+        .fyc-cinematic-logo{ width:min(240px, 42vw); height:auto; margin:0 auto 1.75rem; filter:drop-shadow(0 6px 18px rgba(0,0,0,0.5)); }
+        .fyc-cinematic-hero .fyc-portrait-eyebrow{ font-size:1.2rem; }
+        .fyc-cinematic-hero .fyc-portrait-title{ font-size:clamp(3.2rem, 10vw, 6.5rem); }
+        .fyc-cinematic-hero .fyc-portrait-artist{ font-size:1.15rem; }
+
+        .fyc-hero-warm{
+            background:linear-gradient(160deg, #FDF4D9 0%, #F7E3AA 55%, #EFCB86 100%);
+            padding:3rem var(--space-lg) 3.5rem;
+        }
+        .fyc-hero-inner{max-width:1100px; margin:0 auto; text-align:center;}
+        .fyc-hero-eyebrow{display:inline-block; color:var(--color-accent-gold-dark); font-size:.85rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin-bottom:2rem;}
+
+        .fyc-category-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.75rem 2.5rem; max-width:900px; margin:0 auto 2.5rem; text-align:left;}
+        @media (max-width:700px){ .fyc-category-grid{ grid-template-columns:1fr; gap:1.5rem; } }
+        .fyc-category-card{ text-decoration:none; display:block; }
+        .fyc-category-name{ font-family:var(--font-hero); font-size:2.1rem; letter-spacing:.03em; color:var(--color-text-primary); line-height:1; }
+        .fyc-category-name .fyc-category-tag{ font-family:var(--font-body); font-weight:700; font-size:.85rem; letter-spacing:.04em; text-transform:none; color:var(--color-text-secondary); margin-left:.5rem; }
+        .fyc-category-sub{ font-size:1.05rem; color:var(--color-accent-gold-dark); font-weight:600; margin-top:.15rem; }
+        .fyc-category-card:hover .fyc-category-name{ color:var(--color-accent-gold-dark); }
+
+        .fyc-portrait-wrap{ position:relative; max-width:1100px; margin:0 auto; overflow:hidden; }
+        .fyc-portrait-wrap img{ width:100%; height:auto; display:block; }
+        .fyc-portrait-overlay{
+            position:absolute; left:0; right:0; bottom:0; height:55%;
+            background:linear-gradient(0deg, rgba(20,10,4,0.94) 0%, rgba(20,10,4,0.55) 45%, transparent 100%);
+            display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+            padding-bottom:2.5rem; text-align:center;
+        }
+        .fyc-portrait-eyebrow{ color:#F4E6C8; font-size:1.1rem; font-family:var(--font-heading); font-style:italic; margin-bottom:0; }
+        .fyc-portrait-title{ font-family:var(--font-hero); font-size:clamp(2.8rem, 8vw, 5.5rem); color:#ffffff; letter-spacing:.03em; line-height:.95; margin:.1rem 0 .3rem; }
+        .fyc-portrait-artist{ color:var(--color-accent-gold-light); font-size:1.1rem; letter-spacing:.08em; text-transform:uppercase; font-weight:600; }
+
+        .fyc-meta{display:inline-flex; flex-direction:column; gap:1rem; text-align:left; margin-top:var(--space-md); width:100%; max-width:620px;}
+        .fyc-meta-row{display:grid; grid-template-columns:110px 1fr; gap:1rem; border-top:1px solid rgba(0,0,0,0.08); padding-top:1rem;}
+        .fyc-meta-row:first-child{border-top:none; padding-top:0;}
+        .fyc-meta-label{font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--color-accent-gold); padding-top:.2rem;}
+        .fyc-meta-value p{margin:0 0 .4rem; color:var(--color-text-primary); font-size:.98rem;}
+        .fyc-meta-value p:last-child{margin-bottom:0;}
+        .fyc-meta-value strong{color:var(--color-accent-gold-dark); font-weight:600;}
+
+        .fyc-divider{height:1px; background:linear-gradient(90deg, transparent, var(--color-accent-gold), transparent); max-width:1000px; margin:0 auto; opacity:.6;}
+
+        .fyc-intro-grid{display:grid; grid-template-columns:260px 1fr; gap:var(--space-2xl); align-items:start;}
+        @media (max-width:800px){.fyc-intro-grid{grid-template-columns:1fr;}}
+
+        .fyc-fact-box{background:var(--color-secondary); border:1px solid rgba(0,0,0,0.06); border-radius:var(--radius-lg); padding:var(--space-lg);}
+        .fyc-fact{display:flex; justify-content:space-between; align-items:baseline; padding:.65rem 0; border-bottom:1px solid rgba(0,0,0,0.08);}
+        .fyc-fact:last-child{border-bottom:none;}
+        .fyc-fact-num{font-family:var(--font-hero); font-size:1.6rem; color:var(--color-accent-gold-dark); letter-spacing:.02em;}
+        .fyc-fact-label{font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--color-text-muted); text-align:right;}
+
+        .fyc-song{border-top:1px solid rgba(0,0,0,0.08);}
+        .fyc-song-cat{display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--color-accent-gold-dark); background:rgba(201,114,12,0.1); border:1px solid rgba(201,114,12,0.3); border-radius:999px; padding:.35rem .8rem; margin-bottom:1.1rem;}
+        .fyc-song-cat + .fyc-song-cat{margin-left:.5rem;}
+
+        .embed-wrap{margin:1.5rem 0 1.25rem; border-radius:var(--radius-lg); overflow:hidden; max-width:640px;}
+
+        .fyc-subgrid{display:grid; grid-template-columns:1fr 1fr; gap:var(--space-xl); margin-top:1.5rem;}
+        @media (max-width:800px){.fyc-subgrid{grid-template-columns:1fr;}}
+        .fyc-subitem .embed-wrap{margin-top:.75rem;}
+        .fyc-subitem-label{font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--color-accent-gold-dark); margin:0;}
+
+        .fyc-song-credits{display:flex; flex-wrap:wrap; gap:.5rem 2rem; max-width:640px; padding-top:1.1rem; border-top:1px solid rgba(0,0,0,0.08);}
+        .fyc-song-credits p{margin:0; font-size:.95rem; color:var(--color-text-primary);}
+        .fyc-song-credits .credit-role{display:block; margin-bottom:.2rem;}
+
+        .fyc-cover{width:200px; height:200px; margin:0 0 1.5rem; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid rgba(0,0,0,0.08);}
+        .fyc-cover img{width:100%; height:100%; object-fit:cover; display:block;}
+
+        .fyc-link{
+            display:inline-block; padding:8px 16px; margin-right:8px; font-size:13px; font-weight:600;
+            text-decoration:none; color:var(--color-text-primary);
+            background:rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.15); border-radius:20px;
+            transition:all .25s ease;
+        }
+        .fyc-link:hover{ background:var(--color-accent-gold); border-color:var(--color-accent-gold); color:#fff; }
+
+        .fyc-legal{font-size:.78rem; color:var(--color-text-muted); max-width:640px; margin:0 auto; text-align:center; line-height:1.7;}
+        .footer{ border-top:1px solid rgba(0,0,0,0.08); }
+
+        .credit-item-photo{ display:flex; align-items:center; gap:1.1rem; }
+        .credit-photo{ width:120px; height:120px; min-width:120px; border-radius:50%; object-fit:cover; border:3px solid var(--color-accent-gold); }
+        .credit-item-text{ min-width:0; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="obofourlogoo.png" alt="Obofour Raphael">
+            </a>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="music.html" class="navbar-link">Music</a>
+                <a href="videos.html" class="navbar-link">Videos</a>
+                <a href="tour.html" class="navbar-link">Tour</a>
+                <a href="store.html" class="navbar-link">Store</a>
+                <a href="news.html" class="navbar-link">News</a>
+                <a href="fanclub.html" class="navbar-link">Fan Club</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero fyc-cinematic-hero">
+        <div class="hero-background">
+            <img src="FYCC.jpg.jpeg" alt="Obofour Raphael">
+        </div>
+        <div class="hero-content">
+            <img src="obofourlogoo.png" alt="Obofour Raphael" class="fyc-cinematic-logo">
+            <p class="fyc-portrait-eyebrow">for your</p>
+            <h1 class="fyc-portrait-title">GRAMMY&reg;</h1>
+            <p class="fyc-portrait-artist">consideration</p>
+        </div>
+    </header>
+
+    <header class="fyc-hero-warm">
+        <div class="fyc-hero-inner">
+            <span class="fyc-hero-eyebrow">For Your GRAMMY&reg; Consideration</span>
+
+            <div class="fyc-category-grid">
+                <a href="#album" class="fyc-category-card">
+                    <div class="fyc-category-name">ADOM AKYEDEɛ</div>
+                    <div class="fyc-category-sub">best global music album</div>
+                </a>
+                <a href="#ahoofe" class="fyc-category-card">
+                    <div class="fyc-category-name">AHOOFE <span class="fyc-category-tag">jazz version</span></div>
+                    <div class="fyc-category-sub">best jazz performance</div>
+                </a>
+                <a href="#ahoofe" class="fyc-category-card">
+                    <div class="fyc-category-name">AHOOFE <span class="fyc-category-tag">ft nana ama &amp; ko-jo cue</span></div>
+                    <div class="fyc-category-sub">best global music performance</div>
+                </a>
+                <a href="#awula" class="fyc-category-card">
+                    <div class="fyc-category-name">AWULA</div>
+                    <div class="fyc-category-sub">best african music performance</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="fyc-divider"></div>
+
+    <section class="section">
+        <div class="container fyc-intro-grid">
+            <div class="fyc-fact-box">
+                <div class="fyc-fact"><span class="fyc-fact-num">18</span><span class="fyc-fact-label">Tracks on the album</span></div>
+                <div class="fyc-fact"><span class="fyc-fact-num">20+</span><span class="fyc-fact-label">Years active</span></div>
+                <div class="fyc-fact"><span class="fyc-fact-num">100+</span><span class="fyc-fact-label">Songs released</span></div>
+                <div class="fyc-fact"><span class="fyc-fact-num">4</span><span class="fyc-fact-label">GRAMMY&reg; categories</span></div>
+            </div>
+            <div>
+                <p class="bio-lead">Adom Akyedeɛ — Twi for &ldquo;gift of grace&rdquo; — is Obofour Raphael's 18-track testimony, moving between Highlife guitar lines, Hiplife cadence and gospel conviction.</p>
+                <p>Across its eighteen tracks, Adom Akyedeɛ unfolds like a film set in the Ghanaian world, giving love, tradition, everyday life, rivalry and faith each room to breathe. Obofour Raphael, a rapper by trade, sings, acts and recites poetry throughout the record, drawing it closer in spirit to musical theatre than to a conventional album, one built to travel far beyond Ghana without losing what makes it Ghanaian.</p>
+                <p>Silvanus Raphael Oduro Dickson, known to the world as Obofour Raphael, is a Hiplife and Hip Hop artist: a songwriter, producer, rapper and singer with two and a half decades in the craft. The album drew in Sadat X of Brand Nubian, and made history by securing a sample-interpolation clearance from UK superstar Craig David, cleared through Warner Chappell Music and Round Hill Publishing.</p>
+                <p><strong style="color:var(--color-text-primary);">Ahoofe</strong>, one of its songs, carries the campaign forward on its own, submitted in two performance categories from a single session. <strong style="color:var(--color-text-primary);">Awula</strong> is a separate standalone single, released independently of the album, submitted for Best African Music Performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fyc-song" id="album">
+        <div class="container">
+            <span class="fyc-song-cat">Best Global Music Album</span>
+            <h2 class="section-title" style="margin-bottom:.75rem;">Adom Akyedeɛ</h2>
+            <p style="max-width:65ch;">The full-length statement — eighteen tracks bringing together a wide cast of Ghanaian producers, songwriters and featured vocalists, from Zapp Mallet, Kuvie, Morris Babyface, Nana Ama and Ko&#8209;Jo Cue to Sadat X. Full credits below.</p>
+
+            <div class="embed-wrap">
+                <iframe data-testid="embed-iframe" style="border-radius:12px; display:block;" src="https://open.spotify.com/embed/album/7aoGgddvlgwsZBkrHNzcTR?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/7aoGgddvlgwsZBkrHNzcTR" target="_blank" rel="noopener" class="fyc-link">Spotify</a>
+                <a href="https://music.apple.com/gb/album/adom-akyedee/1839035042" target="_blank" rel="noopener" class="fyc-link">Apple Music</a>
+                <a href="https://audiomack.com/obofour-raphael-2/album/adom-akyedee-1" target="_blank" rel="noopener" class="fyc-link">Audiomack</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fyc-song" id="ahoofe">
+        <div class="container">
+            <span class="fyc-song-cat">Best Global Music Performance</span>
+            <span class="fyc-song-cat">Best Jazz Performance</span>
+            <h2 class="section-title" style="margin-bottom:.75rem;">Ahoofe</h2>
+            <p style="max-width:65ch;">Twi for &ldquo;beauty&rdquo; — one song, two entries. The original featuring Nana Ama and Ko‑Jo Cue stands for Best Global Music Performance; a reworked Jazz Version, cut from the same session, stands for Best Jazz Performance.</p>
+
+            <div class="fyc-subgrid">
+                <div class="fyc-subitem">
+                    <p class="fyc-subitem-label">Featured Version &middot; Best Global Music Performance</p>
+                    <div class="embed-wrap">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px; display:block;" src="https://open.spotify.com/embed/track/1aqop1ogFjGIGl1WkpUWS8?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="album-links">
+                        <a href="https://open.spotify.com/track/1aqop1ogFjGIGl1WkpUWS8" target="_blank" rel="noopener" class="fyc-link">Spotify</a>
+                    </div>
+                    <div class="fyc-song-credits" style="max-width:none; margin-top:1rem;">
+                        <p><span class="credit-role">Written by</span>R. Dickson, Nana Ama Dadzie, Linford K. Amankwaa, E.K. Mallet, Nestor Ankuvie</p>
+                        <p><span class="credit-role">Produced by</span>Kuvie</p>
+                        <p><span class="credit-role">Mixing Engineer</span>Zapp Mallet</p>
+                        <p><span class="credit-role">Mastering</span>Mark Eyden Edwards</p>
+                    </div>
+                </div>
+                <div class="fyc-subitem">
+                    <p class="fyc-subitem-label">Jazz Version &middot; Best Jazz Performance</p>
+                    <div class="embed-wrap">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px; display:block;" src="https://open.spotify.com/embed/track/4jgnPeplRGI54PnNe9qVrh?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="album-links">
+                        <a href="https://open.spotify.com/track/4jgnPeplRGI54PnNe9qVrh" target="_blank" rel="noopener" class="fyc-link">Spotify</a>
+                    </div>
+                    <div class="fyc-song-credits" style="max-width:none; margin-top:1rem;">
+                        <p><span class="credit-role">Written by</span>Raphael Dickson, M. Danquah, N. Ankuvie, E. Mallet &amp; Mark E. Edwards</p>
+                        <p><span class="credit-role">Produced by</span>Obofour Raphael &amp; Kuvie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fyc-song" id="awula">
+        <div class="container">
+            <span class="fyc-song-cat">Best African Music Performance</span>
+            <h2 class="section-title" style="margin-bottom:.75rem;">Awula</h2>
+
+            <p style="max-width:65ch;">A standalone single, not part of Adom Akyedeɛ, released March 5, 2026 — the eve of Ghana's 69th Independence Day. Submitted on its own for Best African Music Performance.</p>
+
+            <div class="embed-wrap">
+                <iframe data-testid="embed-iframe" style="border-radius:12px; display:block;" src="https://open.spotify.com/embed/track/1sYLqSg7OklsVW4bmEQqT9?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="album-links">
+                <a href="https://open.spotify.com/track/1sYLqSg7OklsVW4bmEQqT9" target="_blank" rel="noopener" class="fyc-link">Spotify</a>
+            </div>
+
+            <div class="fyc-song-credits">
+                <p><span class="credit-role">Written By</span>R.Dickson, Kwabena O. Ankomah, D.Quarchie, C.T.Woernle, N.A. Dadzie</p>
+                <p><span class="credit-role">Production / Engineering</span>Kin Dee</p>
+                <p><span class="credit-role">Lead Vocals, Production &amp; Arrangements</span>Obofour Raphael</p>
+                <p><span class="credit-role">Background Vocals</span>Nana Ama</p>
+                <p><span class="credit-role">Guitars</span>Dominic Quarchie (Santrofi)</p>
+                <p><span class="credit-role">Violin</span>Thomas Kwame Woernle</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--color-secondary); border-top:1px solid rgba(0,0,0,0.08);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Full Credits</span>
+                <h2 class="section-title">Who Made Adom Akyedeɛ</h2>
+            </div>
+
+            <h3 style="font-size:1.1rem; color:var(--color-accent-gold-dark); margin-bottom:var(--space-md);">Songwriters, Featured Artists &amp; Vocals</h3>
+            <div class="credits-grid" style="margin-bottom:var(--space-2xl);">
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/obofour-raphael.jpg" alt="Obofour Raphael" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Songwriter, Producer/Engineer</div>
+                        <div class="credit-name">Obofour Raphael</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/kk-kabobo.jpg" alt="KK Kabobo" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Featured Artist</div>
+                        <div class="credit-name">KK Kabobo</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/george-jahraa.jpg" alt="George Jahraa" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Featured Artist / Songwriter</div>
+                        <div class="credit-name">George Jahraa</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/kojo-cue.jpg" alt="Kojo Cue" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Featured Artist / Songwriter</div>
+                        <div class="credit-name">Kojo Cue</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/tillie-gya.jpg" alt="Tillie Gya" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Featured Artist</div>
+                        <div class="credit-name">Tillie Gya</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/margaret-gbindey.jpg" alt="Margaret Gbindey" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Background Vocals</div>
+                        <div class="credit-name">Margaret Gbindey</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/nana-ama.jpg" alt="Nana Ama" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Featured Artist / Songwriter / Vocals</div>
+                        <div class="credit-name">Nana Ama</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/swazzy-b.jpg" alt="Swazzy B" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Featured Artist</div>
+                        <div class="credit-name">Swazzy B</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/shee.jpg" alt="Shee" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Background Vocals</div>
+                        <div class="credit-name">Shee</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/sadat-x.jpg" alt="Sadat X" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Featured Artist</div>
+                        <div class="credit-name">Sadat X</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/pearl-korkor-darkey.jpg" alt="Pearl Korkor Darkey" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Poet / Vocals</div>
+                        <div class="credit-name">Pearl Korkor Darkey</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size:1.1rem; color:var(--color-accent-gold-dark); margin-bottom:var(--space-md);">Producers, Engineers &amp; Musicians</h3>
+            <div class="credits-grid">
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/altra-nova.jpg" alt="Altra Nova" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Producer / Engineer</div>
+                        <div class="credit-name">Altra Nova</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/kuvie.jpg" alt="Kuvie" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Producer</div>
+                        <div class="credit-name">Kuvie</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/zapp-mallet.jpg" alt="Zapp Mallet" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Producer / Engineer / Vocal / Guitar</div>
+                        <div class="credit-name">Zapp Mallet</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/buddy-roro.jpg" alt="Buddy Roro" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Producer / Engineer</div>
+                        <div class="credit-name">Buddy Roro</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/old-swat.jpg" alt="Old Swat" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Producer</div>
+                        <div class="credit-name">Old Swat</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/sax-quito.jpg" alt="Sax Quito" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Saxophonist</div>
+                        <div class="credit-name">Sax Quito</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/morris-babyface.jpg" alt="Morris Babyface" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Producer / Engineer</div>
+                        <div class="credit-name">Morris Babyface</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/ivan-beatz.jpg" alt="Ivan Beatz" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Producer / Engineer</div>
+                        <div class="credit-name">Ivan Beatz</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/ephraim-beatz.jpg" alt="Ephraim Beatz" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Recording Engineer</div>
+                        <div class="credit-name">Ephraim Beatz</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/gideon-pitches.jpg" alt="Gideon Pitches" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Trombone</div>
+                        <div class="credit-name">Gideon Pitches</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/joshua-moszi.jpg" alt="Joshua Moszi" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Guitarist</div>
+                        <div class="credit-name">Joshua Moszi</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/gomez-beatz.jpg" alt="Gomez Beatz" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Recording Engineer / Keyboardist</div>
+                        <div class="credit-name">Gomez Beatz</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/mark-eyden.jpg" alt="Mark Eyden" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Mastering Engineer</div>
+                        <div class="credit-name">Mark Eyden</div>
+                    </div>
+                </div>
+                <div class="credit-item credit-item-photo">
+                    <img class="credit-photo" src="contributors/kai-blankenberg.jpg" alt="Kai Blankenberg" loading="lazy">
+                    <div class="credit-item-text">
+                        <div class="credit-role">Mastering Engineer</div>
+                        <div class="credit-name">Kai Blankenberg</div>
+                    </div>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-role">Clearance</div>
+                    <div class="credit-name">Craig David — Warner Chappell / Round Hill</div>
+                </div>
+            </div>
+
+            <p style="margin-top:var(--space-xl); margin-bottom:0; font-size:.85rem; color:var(--color-text-muted);">&#8471; &amp; &copy; 2025 Ruffy Records. All rights reserved.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none; padding-top:0;">
+                <p class="fyc-legal">GRAMMY® and the gramophone logo are registered trademarks of the Recording Academy®. This is an independent for‑your‑consideration page for Obofour Raphael and is not an official Recording Academy publication.</p>
+                <p class="footer-copyright" style="margin-top:.75rem;">© 2026 Obofour Raphael. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (!navbar) return;
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            const navbarToggle = document.getElementById('navbar-toggle');
+            if (navbarToggle) {
+                navbarToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    document.getElementById('navbar-menu').classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

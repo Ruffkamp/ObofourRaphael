@@ -296,6 +296,19 @@ ul, ol { list-style: none; }
 .navbar-link:hover::after, .navbar-link.active::after { width: 100%; }
 .navbar-link:hover, .navbar-link.active { color: var(--color-accent-gold); }
 
+.navbar-link-fyc {
+    color: var(--color-accent-gold);
+    border: 1px solid var(--color-accent-gold);
+    border-radius: 999px;
+    padding: 6px 16px !important;
+}
+
+.navbar-link-fyc::after { content: none; }
+
+.navbar-link-fyc:hover, .navbar-link-fyc.active {
+    background: var(--color-accent-gold);
+    color: var(--color-primary);
+}
 .navbar-toggle {
     display: none;
     flex-direction: column;
